@@ -5,10 +5,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($usuarios->usuario as $u) {
         if ($u->email == $_POST['email'] && $u->senha == md5($_POST['senha'])) {
             $_SESSION['usuario'] = (string)$u->email;
-            echo "<div style='text-align:center; font-family:sans-serif; margin-top:40px;'>
-                    <p style='color:#c2185b; font-weight:bold;'>Login realizado com sucesso!</p>
-                    <a href='criar_topico.php' style='color:#e91e63; font-weight:bold; text-decoration:none;'>Criar Tópico</a>
-                  </div>";
+          echo "<div style='display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;'>
+        <div style='font-family: Arial, sans-serif; background-color: #fdf2f8; color: #9d174d; padding: 18px 24px; border-radius: 12px; border: 1px solid #fbcfe8; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center;'>
+            <span style='font-weight: 500;'>Login realizado com sucesso!</span> 
+            <a href='criar_topico.php' style='background-color: #ec4899; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;'>Criar Tópico</a>
+        </div>
+    </div>";
             exit;
         }
     } 

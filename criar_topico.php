@@ -14,10 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $novo->addChild("comentarios");
     $topicos->asXML("topicos.xml");
 
-    echo "Tópico criado com sucesso! <a href='listar.php'>Ver Tópicos</a>";
+  echo "<div style='display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;'>
+        <div style='font-family: Arial, sans-serif; background-color: #fdf2f8; color: #9d174d; padding: 18px 24px; border-radius: 12px; border: 1px solid #fbcfe8; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center;'>
+            <span style='font-weight: 500;'>Tópico criado com sucesso!</span> 
+            <a href='listar.php' style='background-color: #ec4899; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;'>Ver Tópicos</a>
+        </div>
+    </div>";
 } else {
 ?>
-
 <style>
     body { font-family: sans-serif; }
     form { max-width: 300px; margin: 40px auto; padding: 20px; background: #fff0f5; border-radius: 8px; }
