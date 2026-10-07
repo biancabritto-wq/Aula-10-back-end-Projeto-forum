@@ -1,20 +1,26 @@
-﻿<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $usuarios = simplexml_load_file("usuarios.xml");
-    $novo = $usuarios->addChild("usuario");
-    $novo->addChild("nome", $_POST['nome']);
-    $novo->addChild("celular", $_POST['celular']);
-    $novo->addChild("email", $_POST['email']);
-    $novo->addChild("senha", md5($_POST['senha']));
-    $usuarios->asXML("usuarios.xml");
+﻿<?php  
 
-    echo "<div style='text-align:center; font-family:sans-serif; margin-top:40px;'>
-            <p style='color:#c2185b; font-weight:bold;'>Usuário cadastrado com sucesso!</p>
-            <a href='login.php' style='color:#e91e63; font-weight:bold; text-decoration:none;'>Fazer login</a>
-          </div>";
-} else {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {  
+
+    $usuarios = simplexml_load_file("usuarios.xml");  
+
+    $novo = $usuarios->addChild("usuario");  
+
+    $novo->addChild("nome", $_POST['nome']);  
+    $novo->addChild("celular", $_POST['celular']);  
+    $novo->addChild("email", $_POST['email']);  
+    $novo->addChild("senha", md5($_POST['senha']));  
+
+    $usuarios->asXML("usuarios.xml");  
+echo "<div style='display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;'>
+        <div style='font-family: Arial, sans-serif; background-color: #fdf2f8; color: #9d174d; padding: 18px 24px; border-radius: 12px; border: 1px solid #fbcfe8; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center;'>
+            <span style='font-weight: 500;'>Usuário cadastrado com sucesso!</span> 
+            <a href='login.php' style='background-color: #ec4899; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;'>Fazer login</a>
+        </div>
+    </div>";  
+
+} else {  
 ?>
-
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
