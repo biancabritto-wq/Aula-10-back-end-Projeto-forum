@@ -23,8 +23,8 @@ try {
     <style>
         body {
             font-family: sans-serif;
-            background: #fff0f5;
-            color: #4a154b;
+            background: #e0f7fa;
+            color: #004d40;
             max-width: 700px;
             margin: 20px auto;
             padding: 0 15px;
@@ -32,21 +32,21 @@ try {
 
         header, article {
             background: #ffffff;
-            border: 1px solid #f8bbd0;
+            border: 1px solid #b2dfdb;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
 
-        h1 { color: #c2185b; margin: 0 0 10px 0; font-size: 1.5rem; }
-        h2 { color: #d81b60; margin-top: 0; font-size: 1.3rem; }
-        h3 { color: #c2185b; font-size: 1rem; margin-top: 15px; }
+        h1 { color: #00796b; margin: 0 0 10px 0; font-size: 1.5rem; }
+        h2 { color: #00897b; margin-top: 0; font-size: 1.3rem; }
+        h3 { color: #00796b; font-size: 1rem; margin-top: 15px; }
 
-        a { color: #e91e63; text-decoration: none; font-weight: bold; }
+        a { color: #009688; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
 
         section {
-            background: #fce4ec;
+            background: #e6fffa;
             padding: 8px 12px;
             margin-bottom: 8px;
             border-radius: 4px;
@@ -56,13 +56,15 @@ try {
             width: 100%;
             padding: 8px;
             margin: 5px 0 10px 0;
-            border: 1px solid #f48fb1;
+            border: 1px solid #80cbc4;
             border-radius: 4px;
             box-sizing: border-box;
+            background-color: #fafafa;
+            color: #004d40;
         }
 
         button {
-            background: #e91e63;
+            background: #009688;
             color: white;
             border: none;
             padding: 8px 14px;
@@ -72,7 +74,7 @@ try {
         }
 
         button:hover {
-            background: #c2185b;
+            background: #00796b;
         }
 
         hr { display: none; }

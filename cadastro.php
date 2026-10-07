@@ -12,10 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $novo->addChild("senha", md5($_POST['senha']));  
 
     $usuarios->asXML("usuarios.xml");  
-echo "<div style='display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;'>
-        <div style='font-family: Arial, sans-serif; background-color: #fdf2f8; color: #9d174d; padding: 18px 24px; border-radius: 12px; border: 1px solid #fbcfe8; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center;'>
+    echo "<div style='display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;'>
+        <div style='font-family: Arial, sans-serif; background-color: #e6fffa; color: #0d9488; padding: 18px 24px; border-radius: 12px; border: 1px solid #99f6e4; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center;'>
             <span style='font-weight: 500;'>Usuário cadastrado com sucesso!</span> 
-            <a href='login.php' style='background-color: #ec4899; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;'>Fazer login</a>
+            <a href='login.php' style='background-color: #0d9488; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;'>Fazer login</a>
         </div>
     </div>";  
 
@@ -24,7 +24,7 @@ echo "<div style='display: flex; justify-content: center; align-items: center; w
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #fff0f5;
+            background: #e0f7fa;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,13 +38,13 @@ echo "<div style='display: flex; justify-content: center; align-items: center; w
             background: #ffffff;
             padding: 30px 25px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.12);
-            border: 1px solid #f8bbd0;
+            box-shadow: 0 4px 15px rgba(0, 150, 136, 0.15);
+            border: 1px solid #b2dfdb;
             box-sizing: border-box;
         }
 
         h2 {
-            color: #d81b60;
+            color: #00897b;
             text-align: center;
             margin: 0 0 20px 0;
             font-size: 1.5rem;
@@ -53,7 +53,7 @@ echo "<div style='display: flex; justify-content: center; align-items: center; w
 
         label {
             display: block;
-            color: #880e4f;
+            color: #004d40;
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 4px;
@@ -64,25 +64,25 @@ echo "<div style='display: flex; justify-content: center; align-items: center; w
             padding: 10px 12px;
             margin-bottom: 16px;
             box-sizing: border-box;
-            border: 1px solid #f48fb1;
+            border: 1px solid #80cbc4;
             border-radius: 6px;
             font-size: 0.95rem;
-            color: #4a154b;
+            color: #004d40;
             background-color: #fafafa;
             transition: all 0.2s ease-in-out;
         }
 
         input:focus {
             outline: none;
-            border-color: #e91e63;
+            border-color: #009688;
             background-color: #fff;
-            box-shadow: 0 0 6px rgba(233, 30, 99, 0.25);
+            box-shadow: 0 0 6px rgba(0, 150, 136, 0.3);
         }
 
         button {
             width: 100%;
             padding: 11px;
-            background: #e91e63;
+            background: #009688;
             color: #ffffff;
             border: none;
             border-radius: 6px;
@@ -94,7 +94,7 @@ echo "<div style='display: flex; justify-content: center; align-items: center; w
         }
 
         button:hover {
-            background: #c2185b;
+            background: #00796b;
         }
 
         button:active {
